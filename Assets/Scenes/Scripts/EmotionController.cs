@@ -15,19 +15,21 @@ public class EmotionController : MonoBehaviour
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
+    
+
         if (keyboard.digit1Key.wasPressedThisFrame)
-            animator.SetInteger("Emotion", 1);
+            animator.CrossFade("Happy", 0.1f);
 
         if (keyboard.digit2Key.wasPressedThisFrame)
-            animator.SetInteger("Emotion", 2);
+            animator.CrossFade("Rejected", 0.1f);
 
         if (keyboard.digit3Key.wasPressedThisFrame)
-            animator.SetInteger("Emotion", 3);
+            animator.CrossFade("Chapa", 0.1f);
 
         if (keyboard.digit4Key.wasPressedThisFrame)
-            animator.SetInteger("Emotion", 4);
+            animator.CrossFade("DigerAnimasyonAdý", 0.1f);
 
         if (keyboard.digit0Key.wasPressedThisFrame)
-            animator.SetInteger("Emotion", 0);
+            animator.CrossFade("Idle", 0.1f);
     }
 }
